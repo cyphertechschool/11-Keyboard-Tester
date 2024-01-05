@@ -4,6 +4,12 @@
     box-sizing: border-box;
 }
 
+:root {
+    --text-color: #f5f5f5;
+    --border: 2px solid rgba(39, 39, 39, 1);
+    --backgroud-color: rgba(39, 39, 39, 0.4);
+}
+
 body {
     font-family: 'Poppins', sans-serif;
     display: flex;
@@ -13,18 +19,27 @@ body {
     height: 100vh;
     overflow: hidden;
     margin: 0;
+    /* background: linear-gradient(145deg, #3A6073, #16222A); */
+    background: url('https://images.unsplash.com/photo-1561112078-7d24e04c3407?q=80&w=1530&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') center center/cover;
+    backdrop-filter: blur(3px);
 }
 
 .insert {
     display: flex;
     flex-direction: column;
     gap: 2rem;
+    padding: 1.4rem;
+    border-radius: 8px;
+    background: var(--backgroud-color);
+    border: var(--border);
+    user-select: none;
 }
 
 .key {
-    border: 1px solid #999;
-    background-color: #eee;
-    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+    background: var(--backgroud-color);
+    border: var(--border);
+    color: var(--text-color);
+    border-radius: 5px;
     display: inline-flex;
     align-items: center;
     font-size: 20px;
@@ -42,7 +57,7 @@ body {
     left: 0;
     text-align: center;
     width: 100%;
-    color: #555;
+    color: var(--text-color);
     font-size: 20px;
     text-transform: uppercase;
 }
@@ -58,7 +73,7 @@ body {
     justify-content: center;
     font-size: 6rem;
     font-weight: bold;
-    color: dodgerblue;
+    color: var(--text-color);
     margin-bottom: 20px;
 }
 
@@ -67,7 +82,7 @@ p {
     text-transform: uppercase;
     letter-spacing: 3px;
     font-weight: bold;
-    color: #262626
+    color: var(--text-color);
 }
 
 @media screen and (max-width:600px) {
